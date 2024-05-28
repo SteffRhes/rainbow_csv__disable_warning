@@ -1263,9 +1263,6 @@ func! rainbow_csv#provide_column_info_on_hover()
     if col_name != ""
         let ui_message = ui_message . printf(', %s', col_name)
     endif
-    if len(header) != num_fields
-        let ui_message = ui_message . '; WARN: num of fields in Header and this line differs'
-    endif
     if exists("b:root_table_name")
         let ui_message = ui_message . printf('; Run `:RainbowCopyBack` Copy to %s', b:root_table_name)
     endif
